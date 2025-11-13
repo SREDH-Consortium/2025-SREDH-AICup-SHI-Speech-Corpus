@@ -12,16 +12,18 @@ These primarily include:
 4. [Mad Doctor](https://www.ptsplus.tv/zh/programs/a3f838da-d613-4d6b-a0b0-2c5a048dba5f)
 
 
-我們製作了這個資料集，目的是舉辦 AICUP 2025 競賽，主題是醫病語音敏感個人資料辨識競賽。
-資料集來源包含國內與國外多來源：
+We have compiled this dataset for the purpose of hosting the AICUP 2025 competition, themed around the identification of sensitive personal information in doctor-patient voice conversations.
+The dataset sources encompass multiple domestic and international origins:
 
-* 在國外資料部分，由合作之澳洲新南威爾斯大學（University of New South Wales，簡稱 UNSW）洛維癌症研究中心（Lowy Cancer Research Centre）提供通過倫理審查的真實病例資料，本計畫人員將針對其中的 SHI 進行代理產生後轉化為逐字稿，再透過口說人員以醫事人員口述的方式針對逐字稿進行校稿後，錄製語音檔並釋出。另外也使用部分線上醫療相關的教學影音資料(來自 Dataset for Automated Medical Transcription )，透過程式處理轉成音檔與逐字稿後再透過標註人員進行標註。
-* 國內資料來源以取得公視授權的醫療場域相關影集字幕為主。
-主要來自:
-1. [大醫院小醫師](https://youtube.com/playlist?list=PLLhKX7btG59fhO0rJIFrLbpmjKs5aRKyx&si=8gTDjLe4sw1R2FGB)
-2. [生死接線員](https://www.ptsplus.tv/zh/programs/4545e678-65ee-4eac-aa5f-6405823a2eb2)
-3. [麻醉風暴](https://www.ptsplus.tv/zh/programs/dd8e14a9-2af2-49ee-8bce-b82cb883b1e6)
-4. [村里來了個暴走女外科](https://www.ptsplus.tv/zh/programs/a3f838da-d613-4d6b-a0b0-2c5a048dba5f)
+* For the international data component, ethically reviewed real-world case data is provided by the Lowy Cancer Research Centre at the University of New South Wales (UNSW) in Australia. Project personnel will generate synthetic speech for the SHI (Speech-to-Speech) data within these cases, convert it into transcripts, and then have speech actors proofread the transcripts using medical personnel narration styles before recording and releasing the audio files. Additionally, some online medical teaching video materials (from the Dataset for Automated Medical Transcription) are utilized. These are processed by programs to generate audio files and transcripts, which are then annotated by annotation personnel.
+* Domestic data sources primarily consist of subtitles from medical-themed television series licensed from Public Television Service (PTS).
+
+Translated with DeepL.com (free version)
+Primarily from:
+1. [A young doctor in a big hospital](https://youtube.com/playlist?list=PLLhKX7btG59fhO0rJIFrLbpmjKs5aRKyx&si=8gTDjLe4sw1R2FGB)
+2. [The Coordinators](https://www.ptsplus.tv/zh/programs/4545e678-65ee-4eac-aa5f-6405823a2eb2)
+3. [Wake Up](https://www.ptsplus.tv/zh/programs/dd8e14a9-2af2-49ee-8bce-b82cb883b1e6)
+4. [Mad Doctor](https://www.ptsplus.tv/zh/programs/a3f838da-d613-4d6b-a0b0-2c5a048dba5f)
 
 # Description of the dataset
 
@@ -29,26 +31,26 @@ These primarily include:
 
 | Directory | Description |
 | --- | --- |
-| <code>dataset/test</code> | Competition Test Set (競賽測試集): task1_answer.txt, task2_answer.txt |
-| <code>dataset/train/first phase</code> | Competition Training Set (競賽訓練集 第一部份), Part 1: audio folder, task1_answer.txt, task2_answer.txt |
-| <code>dataset/train/second phase</code> | Competition Training Set (競賽訓練集 第二部份), Part 2: audio folder, task1_answer.txt, task2_answer.txt |
-| <code>dataset/valid</code> | Competition Valid Set (競賽驗證集): audio folder, task1_answer.txt, task2_answer.txt |
-| <code>Kappa Value</code> | SHI Annotation Consistency (SHI標註一致性) |
+| <code>dataset/test</code> | Competition Test Set (Competition Test Set): task1_answer.txt, task2_answer.txt |
+| <code>dataset/train/first phase</code> | Competition Training Set (Competition Training Set Part One), Part 1: audio folder, task1_answer.txt, task2_answer.txt |
+| <code>dataset/train/second phase</code> | Competition Training Set (Competition Training Set Part Two), Part 2: audio folder, task1_answer.txt, task2_answer.txt |
+| <code>dataset/valid</code> | Competition Valid Set (Competition validation set): audio folder, task1_answer.txt, task2_answer.txt |
+| <code>Kappa Value</code> | SHI Annotation Consistency (SHI Labeling Consistency) |
 | <code>Public Television Service Authorization Source.csv</code> | PTS Drama Source Clip (公視戲劇來源片段) |
 
 ## Task1_answer file structure:
 
 ```
 File ID	Transcript
-SAMPLE_1	李先生，45 歲，因高血壓三年，最近血壓控制不穩，醫生建議調整藥物並監測每日數據。
+SAMPLE_1	Mr. Li, 45 years old, has had hypertension for three years. Recently, his blood pressure has been unstable, and his doctor recommended adjusting his medication and monitoring his daily readings.。
 SAMPLE_2	Mr. Johnson, 58 years old, has been experiencing irregular heartbeat. The doctor advised him to undergo further cardiac examination next week.
 ```
 ### Definitions
 
 | Term | Definition |
 | --- | --- |
-| <code>File ID</code> | Audio File Name (語音檔案名稱) |
-| <code>Transcript</code> | The transcript of the audio (該語音的字幕) |
+| <code>File ID</code> | Audio File Name (Audio File Name) |
+| <code>Transcript</code> | The transcript of the audio (Subtitles for this audio) |
 
 
 ## Task2_answer file structure:
@@ -70,11 +72,11 @@ file01	IDNUM	14.464	15.782	62S02144
 
 | Term | Definition |
 | --- | --- |
-| <code>File ID</code> | Audio File Name (語音檔案名稱) |
-| <code>SHI Type</code> | Label Types (標籤種類) |
-| <code>Start Offset</code> | Label Start Position (標籤開始位置) |
-| <code>End Offset</code> | Label End Position (標籤結束位置) |
-| <code>Text(Optional)</code> | Label Reference Text (標籤參考文本) |
+| <code>File ID</code> | Audio File Name (Audio File Name) |
+| <code>SHI Type</code> | Label Types (Label Types) |
+| <code>Start Offset</code> | Label Start Position (Tag Start Position) |
+| <code>End Offset</code> | Label End Position (End of tag position) |
+| <code>Text(Optional)</code> | Label Reference Text (Label Reference Text) |
 
 ### Task 2 Annotation Categories
 
@@ -91,22 +93,22 @@ file01	IDNUM	14.464	15.782	62S02144
 
 
 
-| SHI 類別 | 類別定義 | 競賽提供的資料中的類別名稱 |
+| SHI Category | Category Definition | Category Name in Competition Data |
 | :----| :----| :----|
-| 姓名 | 病患名 / 醫師名 / 使用者名稱 / 家屬姓名 / 個人姓名 | PATIENT / DOCTOR / USERNAME / FAMILYNAME / PERSONALNAME |
-| 職業 | 無 | PROFESSION |
-| 地點 | 診間號 / 部門 / 醫院 / 組織 / 街 / 城市 / 區 / 郡 / 州 / 國家 / 區號 / 其他 | ROOM / DEPARTMENT / HOSPITAL / ORGANIZATION / STREET / CITY / DISTRICT / COUNTY / STATE / COUNTRY / ZIP / LOCATION-OTHER |
-| 年齡 | 無 | AGE |
-| 日期 | 日期 / 時間 / 週期 / 頻率 | DATE / TIME / DURATION / SET |
-| 聯絡方式 | 手機號碼 / 傳真 / 電子郵件信箱 / 網址 / 網際網路協定位址 | PHONE / FAX / EMAIL / URL / IPADDRESS |
-| 識別符 | 社群安全碼 / 醫療紀錄號碼 / 健康計畫號碼 / 帳戶 / 證照號碼 / 車牌 / 裝置號碼 / 生物識別碼 / 識別碼 | SOCIAL_SECURITY_NUMBER / MEDICAL_RECORD_NUMBER / HEALTH_PLAN_NUMBER / ACCOUNT_NUMBER / LICENSE_NUMBER / VEHICLE_ID / DEVICE_ID / BIOMETRIC_ID / ID_NUMBER |
-| 其他 | 無 | OTHER |
+| Name | Patient Name / Doctor Name / User Name / Family Member Name / Personal Name | PATIENT / DOCTOR / USERNAME / FAMILYNAME / PERSONALNAME |
+| Profession | None | PROFESSION |
+| Location | Room Number / Department / Hospital / Organization / Street / City / District / County / State / Country / ZIP / OTHER | ROOM / DEPARTMENT / HOSPITAL / ORGANIZATION / STREET / CITY / DISTRICT / COUNTY / STATE / COUNTRY / ZIP / LOCATION-OTHER |
+| Age | None | AGE |
+| Date | Date / Time / Duration / Frequency | DATE / TIME / DURATION / SET |
+| Contact Method | Mobile Number / Fax / Email Address / URL / IP Address | PHONE / FAX / EMAIL / URL / IPADDRESS |
+| Identifier | Social Security Number / Medical Record Number / Health Plan Number / Account / License Number / License Plate / Device ID / Biometric ID / Identification Number | SOCIAL_SECURITY_NUMBER / MEDICAL_RECORD_NUMBER / HEALTH_PLAN_NUMBER / ACCOUNT_NUMBER / LICENSE_NUMBER / VEHICLE_ID / DEVICE_ID / BIOMETRIC_ID / ID_NUMBER |
+| Other | None | OTHER |
 
 # How to get dataset
 We do not actively provide the original voice recordings of real patient cases in this dataset. If you are interested in using the complete OpenDeID v3 corpus, please refer to and apply through the following link: https://github.com/SREDH-Consortium/OpenDeID-Corpus.<br>
 The Public Television (PTS) segments only provide the source reference. Users are responsible for downloading the corresponding audio files themselves.<br>
-本資料不主動提供真實病例語音，有興趣使用完整的 The OpenDeid v3 corpus 請參考 https://github.com/SREDH-Consortium/OpenDeID-Corpus 進行申請。<br>
-公共電視片段僅提供資料來源，由使用者自行下載該語音。
+This resource does not actively provide authentic patient speech recordings. Interested parties wishing to use the complete The OpenDeid v3 corpus should refer to https://github.com/SREDH-Consortium/OpenDeID-Corpus for application procedures.<br>
+Public television clips serve solely as data sources; users must download the speech recordings themselves.
 
 ## External Resources
 
