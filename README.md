@@ -107,8 +107,7 @@ file01	IDNUM	14.464	15.782	62S02144
 # How to get dataset
 We do not actively provide the original voice recordings of real patient cases in this dataset. If you are interested in using the complete OpenDeID v3 corpus, please refer to and apply through the following link: https://github.com/SREDH-Consortium/OpenDeID-Corpus.<br>
 The Public Television (PTS) segments only provide the source reference. Users are responsible for downloading the corresponding audio files themselves.<br>
-This resource does not actively provide authentic patient speech recordings. Interested parties wishing to use the complete The OpenDeid v3 corpus should refer to https://github.com/SREDH-Consortium/OpenDeID-Corpus for application procedures.<br>
-Public television clips serve solely as data sources; users must download the speech recordings themselves.
+
 
 ## External Resources
 
